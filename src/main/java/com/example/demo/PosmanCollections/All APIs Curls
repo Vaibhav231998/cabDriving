@@ -1,0 +1,32 @@
+
+Registering User
+******************
+
+curl --location 'http://localhost:8080/api/users' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name": "Abhishek",
+    "age" : 25,
+    "gender" : "M"
+}'
+
+Registering Driver
+*******************
+
+curl --location 'http://localhost:8080/api/drivers' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name": "Driver10",
+    "gender" : "M",
+    "age" :22,
+    "vehicleDetails" :"Swift, KA-01-12345",
+    "currentLocation" : [6,0],
+     "available" : true
+
+    }'
+
+
+Find-Ride
+***********
+
+curl --location 'http://localhost:8080/api/find-ride?username=Abhishek&source=0%2C0&destination=5%2C0'
